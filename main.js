@@ -27,7 +27,10 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
             
             break;
         case 1:
-            alert("dentro")
+            let nom = prompt(`Ingrese su nombre:`);
+            let edad = Number(prompt(`Ingrese su edad:`));
+            let color = prompt(`Ingrese su color favorito`);
+            alert(`Sr.${nom} Usted tiene ${edad} años y su color favorito es ${color}`)
             break;
         case 2:
             console.log(`Se ha creado un objeto vacio llamado objDatos`)
@@ -84,11 +87,12 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
             let contin="SI";
 
             var arrayObejetos =[
-                /* casa ={nombre:"hay 1",tipo:"hay 5",tiempo:"no hay"},
+                casa ={nombre:"hay 1",tipo:"hay 5",tiempo:"no hay"},
                 electrodomestico = {nombre:"cafe",tipo:"blanco",tiempo:"verde"},
-                cosa = {nombre:"LG",tipo:"microondas",tiempo:"Nokia"}, */
+                cosa = {nombre:"LG",tipo:"microondas",tiempo:"Nokia"}, 
             ]
-
+/* 
+             con este for ingresos la cantidad e objetos que quiera a mi array  */
             for (let i = 0; contin == "SI"  ;i++) {
                 let nom = prompt(`Ingrese el nombre del objeto`);
                 let tipo = prompt(`Ingrese el tipo del onjeto`);
@@ -99,16 +103,22 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
                 contin = prompt(`Desea ingresar mas objetos al array? (si o no)`).toUpperCase()
                 console.log(contin);
             }
-
+            
             console.log(arrayObejetos);
             break;
         case 12:
+            console.log(`Mostramos los elementos del Array con objetos`);
             for (let i=0; i < arrayObejetos.length; i++) {
                 console.log("Nombre: "+arrayObejetos[i].nombre+" Tipo:"+arrayObejetos[i].tipo+" Años de uso:"+arrayObejetos[i].tiempo)
             }
             break;
         case 13:
+
+            arrayObejetos.forEach(function(i){
+                console.log(i);
+            })
             
+
             break;
         case 14:
             
