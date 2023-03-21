@@ -91,9 +91,10 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
                 electrodomestico = {nombre:"cafe",tipo:"blanco",tiempo:"verde"},
                 cosa = {nombre:"LG",tipo:"microondas",tiempo:"Nokia"}, 
             ]
-/* 
-             con este for ingresos la cantidad e objetos que quiera a mi array  */
-            for (let i = 0; contin == "SI"  ;i++) {
+
+
+            /*  con este for ingresos la cantidad e objetos que quiera a mi array  */
+             for (let i = 0; contin == "SI"  ;i++) {
                 let nom = prompt(`Ingrese el nombre del objeto`);
                 let tipo = prompt(`Ingrese el tipo del onjeto`);
                 let tiempo = prompt(`Ingrese los años de uso del objeto ${nom}`)
@@ -103,7 +104,7 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
                 contin = prompt(`Desea ingresar mas objetos al array? (si o no)`).toUpperCase()
                 console.log(contin);
             }
-            
+             
             console.log(arrayObejetos);
             break;
         case 12:
@@ -113,7 +114,7 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
             }
             break;
         case 13:
-
+            console.log(`Imprimimos la el array con los objetos atravez de un foreach`);
             arrayObejetos.forEach(function(i){
                 console.log(i);
             })
