@@ -81,17 +81,30 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
             break;
         case 11:
             alert("Se ha creado un aray con objetos")
+            let contin="SI";
+
             var arrayObejetos =[
-                casa ={tipo:"hay 1",unpiso:"hay 5",conGarage:"no hay"},
-                animal = {tipo:"cafe",gato:"blanco",loro:"verde"},
-                cosa = {tipo:"LG",micro:"microondas",telefono:"Nokia"},
+                /* casa ={nombre:"hay 1",tipo:"hay 5",tiempo:"no hay"},
+                electrodomestico = {nombre:"cafe",tipo:"blanco",tiempo:"verde"},
+                cosa = {nombre:"LG",tipo:"microondas",tiempo:"Nokia"}, */
             ]
+
+            for (let i = 0; contin == "SI"  ;i++) {
+                let nom = prompt(`Ingrese el nombre del objeto`);
+                let tipo = prompt(`Ingrese el tipo del onjeto`);
+                let tiempo = prompt(`Ingrese los años de uso del objeto ${nom}`)
+                let obje ={nombre:nom,tipo:tipo,tiempo:tiempo}
+
+                arrayObejetos.unshift(obje);
+                contin = prompt(`Desea ingresar mas objetos al array? (si o no)`).toUpperCase()
+                console.log(contin);
+            }
+
             console.log(arrayObejetos);
             break;
         case 12:
             for (let i=0; i < arrayObejetos.length; i++) {
-                console.log(arrayObejetos[i].tipo)
-                
+                console.log("Nombre: "+arrayObejetos[i].nombre+" Tipo:"+arrayObejetos[i].tipo+" Años de uso:"+arrayObejetos[i].tiempo)
             }
             break;
         case 13:
