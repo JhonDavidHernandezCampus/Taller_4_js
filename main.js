@@ -94,7 +94,7 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
 
 
             /*  con este for ingresos la cantidad e objetos que quiera a mi array  */
-             for (let i = 0; contin == "SI"  ;i++) {
+            /* for (let i = 0; contin == "SI"  ;i++) {
                 let nom = prompt(`Ingrese el nombre del objeto`);
                 let tipo = prompt(`Ingrese el tipo del onjeto`);
                 let tiempo = prompt(`Ingrese los años de uso del objeto ${nom}`)
@@ -102,9 +102,8 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
 
                 arrayObejetos.unshift(obje);
                 contin = prompt(`Desea ingresar mas objetos al array? (si o no)`).toUpperCase()
-                console.log(contin);
-            }
-             
+                console.log(contin); 
+            }*/
             console.log(arrayObejetos);
             break;
         case 12:
@@ -118,14 +117,32 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
             arrayObejetos.forEach(function(i){
                 console.log(i);
             })
-            
 
             break;
-        case 14:
+        case 14:/* 
+            let nomb = prompt(`Ingrese el nombre del objeto`);
+            let tip = prompt(`Ingrese el tipo del onjeto`);
+            let tiemp = prompt(`Ingrese los años de uso del objeto ${nomb}`)
+            let obje ={nombre:nomb,tipo:tip,tiempo:tiemp} */
+            console.log("Recorremos el array con el metodo map");
+            let copia = arrayObejetos.map(agregar => `El objeto ${agregar.nombre} de tipo ${agregar.tipo} tiene ${agregar.tiempo} años de uso \n`);
             
+            console.log(copia[0]);
             break;
         case 15:
-            
+            let num = prompt("Ingrese un numero para retornar su cantidad de digitos")
+            function numeroDeDigitos(numero) {
+                let contador = 0;
+                let numeroAbsoluto = Math.abs(numero);
+                while (numeroAbsoluto >= 1) {
+                    contador++;
+                    numeroAbsoluto /= 10;
+                }
+                return contador;
+            }    
+            console.log( numeroDeDigitos(num));
+
+
             break;
 
             default:
