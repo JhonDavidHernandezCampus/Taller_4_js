@@ -116,11 +116,8 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
             })
 
             break;
-        case 14:/* 
-            let nomb = prompt(`Ingrese el nombre del objeto`);
-            let tip = prompt(`Ingrese el tipo del onjeto`);
-            let tiemp = prompt(`Ingrese los años de uso del objeto ${nomb}`)
-            let obje ={nombre:nomb,tipo:tip,tiempo:tiemp} */
+        case 14:
+            
             console.log("Recorremos el array con el metodo map");
             let copia = arrayObejetos.map(agregar => `El objeto ${agregar.nombre} de tipo ${agregar.tipo} tiene ${agregar.tiempo} años de uso \n`);
             
