@@ -87,14 +87,10 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
             let contin="SI";
 
             var arrayObejetos =[
-                casa ={nombre:"hay 1",tipo:"hay 5",tiempo:"no hay"},
-                electrodomestico = {nombre:"cafe",tipo:"blanco",tiempo:"verde"},
-                cosa = {nombre:"LG",tipo:"microondas",tiempo:"Nokia"}, 
             ]
 
-
             /*  con este for ingresos la cantidad e objetos que quiera a mi array  */
-            /* for (let i = 0; contin == "SI"  ;i++) {
+            for (let i = 0; contin == "SI"  ;i++) {
                 let nom = prompt(`Ingrese el nombre del objeto`);
                 let tipo = prompt(`Ingrese el tipo del onjeto`);
                 let tiempo = prompt(`Ingrese los años de uso del objeto ${nom}`)
@@ -103,7 +99,8 @@ for (var vlrMenu = 0.5;vlrMenu != 0;){
                 arrayObejetos.unshift(obje);
                 contin = prompt(`Desea ingresar mas objetos al array? (si o no)`).toUpperCase()
                 console.log(contin); 
-            }*/
+            }
+
             console.log(arrayObejetos);
             break;
         case 12:
